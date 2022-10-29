@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"m":"paquete.text_finder_cliente_servidor","l":"paquete.controlador"},{"m":"paquete.text_finder_cliente_servidor","l":"paquete.vista_main"}];updateSearchResults();

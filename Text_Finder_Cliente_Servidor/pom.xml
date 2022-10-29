@@ -61,7 +61,7 @@
                         <id>default-cli</id>
                         <configuration>
                             <mainClass>
-                                paquete.text_finder_cliente_servidor/paquete.text_finder_cliente_servidor.HelloApplication
+                                paquete.text_finder_cliente_servidor/paquete.vista_main.cliente_main
                             </mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>

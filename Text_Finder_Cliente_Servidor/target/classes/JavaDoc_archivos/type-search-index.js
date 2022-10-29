@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"paquete.vista_main","l":"cliente_main"},{"p":"paquete.controlador","l":"Escenario1_controlador"}];updateSearchResults();
