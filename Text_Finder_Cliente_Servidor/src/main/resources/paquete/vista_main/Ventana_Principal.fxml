@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="920.0" prefWidth="780.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="paquete.controlador.Ventana_Principal_Controlador">
+   <children>
+      <ImageView fitHeight="920.0" fitWidth="780.0" layoutX="-1.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../imagenes/img_Vprincipal.png" />
+         </image>
+      </ImageView>
+      <Pane layoutX="111.0" layoutY="127.0" prefHeight="617.0" prefWidth="483.0" style="-fx-background-color: #f7f7f7;">
+         <children>
+            <ScrollBar layoutX="462.0" layoutY="12.0" orientation="VERTICAL" prefHeight="593.0" prefWidth="14.0" style="-fx-background-color: #f0f0f0;" />
+         </children></Pane>
+      <Label layoutX="291.0" layoutY="77.0" text="Biblioteca" textFill="#bf3636">
+         <font>
+            <Font name="Tw Cen MT Condensed Extra Bold" size="33.0" />
+         </font>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="613.0" layoutY="409.0" prefHeight="27.0" prefWidth="131.0" style="-fx-background-color: #f7f7f7;" text="Eliminar Documento" textFill="#bf3636">
+         <ripplerFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.75" green="0.2083333283662796" blue="0.2083333283662796" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </ripplerFill>
+         <font>
+            <Font name="Tw Cen MT" size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="613.0" layoutY="477.0" style="-fx-background-color: #f7f7f7;" text="Agregar Documento" textFill="#bf3636">
+         <ripplerFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.75" green="0.2083333283662796" blue="0.2083333283662796" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </ripplerFill>
+         <font>
+            <Font name="Tw Cen MT" size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="273.0" layoutY="786.0" prefHeight="50.0" prefWidth="159.0" style="-fx-background-color: #f7f7f7;" text="Buscar Texto" textFill="#bf3636">
+         <ripplerFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.75" green="0.2083333283662796" blue="0.2083333283662796" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </ripplerFill>
+         <font>
+            <Font name="Tw Cen MT" size="22.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

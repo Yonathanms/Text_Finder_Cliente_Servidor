@@ -4,10 +4,11 @@ import com.jfoenix.controls.JFXSlider;
 import javafx.fxml.FXML;
 
 /**
- * @author Yonathan
  * esta clase representa el controlador del escenario 1
+ * @author Yonathan
+
  */
-public class Escenario1_controlador {
+public class Ventana_Principal_Controlador {
 
     /**
      * Metodo del objeto "barra"
