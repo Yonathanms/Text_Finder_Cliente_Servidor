@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="230.0" prefWidth="439.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="paquete.controlador.Ventana_Eliminardoc_Controlador">
+   <children>
+      <ImageView fitHeight="230.0" fitWidth="439.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../imagenes/img_Veliminardoc.png" />
+         </image>
+      </ImageView>
+      <TextField layoutX="126.0" layoutY="90.0" prefHeight="25.0" prefWidth="188.0" promptText="                 Documento" />
+      <Label layoutX="137.0" layoutY="31.0" text="Nombre del Documento" textFill="#bf3636">
+         <font>
+            <Font name="Tw Cen MT Condensed" size="24.0" />
+         </font>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="89.0" layoutY="165.0" prefHeight="27.0" prefWidth="97.0" style="-fx-background-color: #f7f7f7;" text="Eliminar " textFill="#bf3636">
+         <ripplerFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.75" green="0.2083333283662796" blue="0.2083333283662796" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </ripplerFill>
+         <font>
+            <Font name="Tw Cen MT" size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="255.0" layoutY="165.0" prefHeight="27.0" prefWidth="97.0" style="-fx-background-color: #f7f7f7;" text="Atrás" textFill="#bf3636">
+         <ripplerFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.75" green="0.2083333283662796" blue="0.2083333283662796" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </ripplerFill>
+         <font>
+            <Font name="Tw Cen MT" size="14.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

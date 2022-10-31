@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollBar?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="920.0" prefWidth="780.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="paquete.controlador.VentanaBusquedatxt_Controlador">
+   <children>
+      <ImageView fitHeight="920.0" fitWidth="780.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../imagenes/img_Vprincipal.png" />
+         </image>
+      </ImageView>
+      <Pane layoutX="109.0" layoutY="172.0" prefHeight="617.0" prefWidth="483.0" style="-fx-background-color: #f7f7f7;">
+         <children>
+            <ScrollBar layoutX="462.0" layoutY="12.0" orientation="VERTICAL" prefHeight="593.0" prefWidth="14.0" style="-fx-background-color: #f0f0f0;" />
+         </children>
+      </Pane>
+      <JFXButton buttonType="RAISED" layoutX="168.0" layoutY="124.0" prefHeight="27.0" prefWidth="131.0" style="-fx-background-color: #f7f7f7;" text="Frase" textFill="#bf3636">
+         <ripplerFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.75" green="0.2083333283662796" blue="0.2083333283662796" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </ripplerFill>
+         <font>
+            <Font name="Tw Cen MT" size="14.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="233.0" layoutY="31.0" text="Busqueda de Texto" textFill="#bf3636">
+         <font>
+            <Font name="Tw Cen MT Condensed Extra Bold" size="33.0" />
+         </font>
+      </Label>
+      <TextField layoutX="134.0" layoutY="77.0" prefHeight="28.0" prefWidth="433.0" promptText="                                    Palabra / frase">
+         <font>
+            <Font name="Tw Cen MT" size="15.0" />
+         </font>
+      </TextField>
+      <JFXButton buttonType="RAISED" layoutX="402.0" layoutY="124.0" prefHeight="27.0" prefWidth="131.0" style="-fx-background-color: #f7f7f7;" text="Palabras" textFill="#bf3636">
+         <ripplerFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.75" green="0.2083333283662796" blue="0.2083333283662796" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </ripplerFill>
+         <font>
+            <Font name="Tw Cen MT" size="14.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="27.0" fitWidth="27.0" layoutX="168.0" layoutY="124.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../iconos/lupa.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="27.0" fitWidth="27.0" layoutX="402.0" layoutY="124.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../iconos/lupa.png" />
+         </image>
+      </ImageView>
+      <JFXButton buttonType="RAISED" layoutX="615.0" layoutY="212.0" prefHeight="27.0" prefWidth="131.0" style="-fx-background-color: #f7f7f7;" text="Ordenar por:" textFill="#bf3636">
+         <ripplerFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.75" green="0.2083333283662796" blue="0.2083333283662796" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </ripplerFill>
+         <font>
+            <Font name="Tw Cen MT" size="14.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="117.0" layoutY="826.0" text="Número de comparaciones = " textFill="#bf3636">
+         <font>
+            <Font name="Tw Cen MT" size="23.0" />
+         </font>
+      </Label>
+      <TextField editable="false" layoutX="416.0" layoutY="814.0" prefHeight="25.0" prefWidth="157.0" promptText="Árbol Binario de Búsqueda" />
+      <TextField editable="false" layoutX="416.0" layoutY="853.0" prefHeight="25.0" prefWidth="157.0" promptText="                  AVL" />
+      <JFXButton buttonType="RAISED" layoutX="615.0" layoutY="726.0" prefHeight="27.0" prefWidth="131.0" style="-fx-background-color: #f7f7f7;" text="Atrás" textFill="#bf3636">
+         <ripplerFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.75" green="0.2083333283662796" blue="0.2083333283662796" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </ripplerFill>
+         <font>
+            <Font name="Tw Cen MT" size="14.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>
