@@ -2,8 +2,10 @@ package paquete.vista_main;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import paquete.controlador.Ventana_Principal_Controlador;
 
 import java.io.IOException;
 
@@ -25,12 +27,20 @@ public class cliente_main extends Application {
      * a la consola
      */
     @Override
-    public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(cliente_main.class.getResource("Ventana_Principal.fxml"));
-        Scene scene = new Scene(fxmlLoader.load());
-        stage.setTitle("Text_Finder");
-        stage.setScene(scene);
-        stage.show();
+    public void start(Stage primaryStage) throws IOException {
+
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/paquete/vista_main/Ventana_Principal.fxml"));
+
+        Parent root = loader.load();
+
+        Scene scene = new Scene(root);
+
+        primaryStage.setScene(scene);
+        Ventana_Principal_Controlador controller = loader.getController();
+
+        controller.setStage(primaryStage);
+        primaryStage.show();
+
     }
 
     /**

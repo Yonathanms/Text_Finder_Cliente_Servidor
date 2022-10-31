@@ -1,5 +1,5 @@
 /**
- * este modulo lo creo IntelliJ y funciona para la documentación del JavaDoc y también indica los requerimientos
+ * este modulo lo creó IntelliJ y funciona para la documentación del JavaDoc y también indica los requerimientos
  * del código
  */
 

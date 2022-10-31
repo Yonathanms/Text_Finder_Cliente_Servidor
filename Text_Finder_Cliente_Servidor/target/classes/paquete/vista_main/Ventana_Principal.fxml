@@ -28,7 +28,7 @@
             <Font name="Tw Cen MT Condensed Extra Bold" size="33.0" />
          </font>
       </Label>
-      <JFXButton fx:id="btn_EliminarFile" buttonType="RAISED" layoutX="613.0" layoutY="409.0" prefHeight="27.0" prefWidth="131.0" style="-fx-background-color: #f7f7f7;" text="Eliminar Documento" textFill="#bf3636">
+      <JFXButton fx:id="btn_EliminarFile" buttonType="RAISED" layoutX="613.0" layoutY="409.0" onAction="#click_btn_EliminarFile" prefHeight="27.0" prefWidth="131.0" style="-fx-background-color: #f7f7f7;" text="Eliminar Documento" textFill="#bf3636">
          <ripplerFill>
             <LinearGradient endX="1.0" endY="1.0">
                <stops>
