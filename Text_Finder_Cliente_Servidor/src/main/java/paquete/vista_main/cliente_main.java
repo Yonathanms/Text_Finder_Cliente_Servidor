@@ -26,7 +26,7 @@ public class cliente_main extends Application {
      */
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(cliente_main.class.getResource("Ventana_Ordenamiento.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(cliente_main.class.getResource("Ventana_Principal.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         stage.setTitle("Text_Finder");
         stage.setScene(scene);
