@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="271.0" prefWidth="225.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="paquete.controlador.VentanaOrdenamiento_Controlador">
+   <children>
+      <ImageView fitHeight="300.0" fitWidth="225.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../imagenes/img_Vordenamiento.png" />
+         </image>
+      </ImageView>
+      <JFXRadioButton layoutX="23.0" layoutY="50.0" text="Nombre del archivo">
+         <selectedColor>
+            <Color red="0.5647059082984924" green="0.0313725508749485" blue="0.0313725508749485" />
+         </selectedColor></JFXRadioButton>
+      <JFXRadioButton layoutX="23.0" layoutY="96.0" text="Fecha de Creación">
+         <selectedColor>
+            <Color red="0.5647059082984924" green="0.0313725508749485" blue="0.0313725508749485" />
+         </selectedColor></JFXRadioButton>
+      <JFXRadioButton layoutX="23.0" layoutY="142.0" text="Tamaño (Cantidad de Palabras)">
+         <selectedColor>
+            <Color red="0.5647059082984924" green="0.0313725508749485" blue="0.0313725508749485" />
+         </selectedColor></JFXRadioButton>
+      <JFXButton buttonType="RAISED" layoutX="88.0" layoutY="203.0" style="-fx-background-color: #f7f7f7;" text="Aceptar" textFill="#bf3636">
+         <ripplerFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.75" green="0.2083333283662796" blue="0.2083333283662796" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </ripplerFill>
+         <font>
+            <Font name="Tw Cen MT" size="14.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>
