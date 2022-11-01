@@ -40,7 +40,7 @@ public class cliente_main extends Application {
         primaryStage.setTitle("Text_Finder");
         Ventana_Principal_Controlador controller = loader.getController();
 
-        controller.setStage(primaryStage);
+        //controller.setStage(primaryStage);
         primaryStage.show();
 
     }

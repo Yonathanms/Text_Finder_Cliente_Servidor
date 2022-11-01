@@ -1,6 +1,6 @@
 package paquete.controlador;
 
-import paquete.vista_main.*;
+import javafx.stage.FileChooser;
 
 import com.jfoenix.controls.JFXButton;
 import javafx.event.ActionEvent;
@@ -13,6 +13,7 @@ import javafx.scene.layout.Pane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
+import java.io.File;
 import java.io.IOException;
 
 
@@ -32,9 +33,9 @@ public class Ventana_Principal_Controlador {
      * metodo que obtiene un escenario
      * @param primaryStage
      */
-    public void setStage(Stage primaryStage) {
-        stage = primaryStage;
-    }
+    //public void setStage(Stage primaryStage) {
+        //stage = primaryStage;
+   // }
 
     /**
      * atributo del pane de la ventana principal
@@ -70,10 +71,25 @@ public class Ventana_Principal_Controlador {
      * Metodo del boton de agregar archivos
      * @param event click
      */
+
     @FXML
     void click_btn_AgregarFile(ActionEvent event) {
+        //Constantes que definen filtros de los archivos en la búsqueda de la biblioteca de Windows
+        FileChooser.ExtensionFilter pdf = new FileChooser.ExtensionFilter("Archivos PDF","*.pdf");
+        FileChooser.ExtensionFilter doc = new FileChooser.ExtensionFilter("Archivos Word","*.docx");
+        FileChooser.ExtensionFilter txt = new FileChooser.ExtensionFilter("Archivos de Texto","*.txt");
+        FileChooser.ExtensionFilter all = new FileChooser.ExtensionFilter("Todos los archivos","*.txt","*.docx","*.pdf");
 
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.getExtensionFilters().addAll(pdf);
+        fileChooser.getExtensionFilters().addAll(doc);
+        fileChooser.getExtensionFilters().addAll(txt);
+        fileChooser.getExtensionFilters().addAll(all);
 
+        fileChooser.setTitle("Seleccionar archivo(s) o carpeta");
+        fileChooser.setInitialDirectory(new File("C:"));
+        File selectedFile = fileChooser.showOpenDialog(stage);
+        
     }
 
 
