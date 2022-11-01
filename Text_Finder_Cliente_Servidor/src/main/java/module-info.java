@@ -8,8 +8,8 @@ module paquete.text_finder_cliente_servidor {
     requires javafx.fxml;
     requires com.jfoenix;
 
+    opens  paquete.controlador to javafx.fxml;
     opens paquete.vista_main to javafx.fxml;
     exports paquete.vista_main;
     exports paquete.controlador;
-    opens paquete.controlador to javafx.fxml;
 }

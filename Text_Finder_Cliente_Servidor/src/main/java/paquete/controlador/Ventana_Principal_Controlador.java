@@ -19,43 +19,49 @@ import java.io.IOException;
 /**
  * Clase controlador de la ventana principal de la interfaz, los métodos van a representar las funciones de cada elemento
  * de la ventana
- *
  * @author Yonathan
  */
 public class Ventana_Principal_Controlador {
 
-
+    /**
+     * atributo que representa  un escenario
+     */
     private Stage stage;
+
+    /**
+     * metodo que obtiene un escenario
+     * @param primaryStage
+     */
     public void setStage(Stage primaryStage) {
         stage = primaryStage;
     }
 
     /**
-     * método del pane de la ventana principal
+     * atributo del pane de la ventana principal
      */
     @FXML
     private Pane Pane_V1;
 
     /**
-     * Método del scrollbar de la ventana principal
+     * atributo del ScrollBar de la ventana principal
      */
     @FXML
     private ScrollBar Scroll_V1;
 
     /**
-     * Método del botón "Buscar Texto de la ventana principal
+     * atributo del botón de "Agregar Documento"
      */
     @FXML
     private JFXButton btn_AgregarFile;
 
     /**
-     * Método del botón "Agregar Documento"
+     * Atributo del botón "Buscar Texto"
      */
     @FXML
     private JFXButton btn_BuscarFile;
 
     /**
-     * Método del botón "Eliminar Documento"
+     * Atributo del botón "Eliminar Documento"
      */
     @FXML
     private JFXButton btn_EliminarFile;
@@ -73,10 +79,30 @@ public class Ventana_Principal_Controlador {
 
     /**
      * Metodo del boton que dirige a la ventana de Busqueda de palabras
-     * @param event
+     * @param event click
+     *
+     * Este método también debe realizar la indización de la biblioteca
      */
     @FXML
-    void click_btn_BuscarFile(ActionEvent event) {
+    void click_btn_BuscarFile(ActionEvent event) throws IOException {
+
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/paquete/vista_main/Ventana_Busquedatxt.fxml"));
+        Parent root = loader.load();
+        VentanaBusquedatxt_Controlador controladorVbuscardoc = loader.getController();
+        Scene scene = new Scene(root);
+        Stage stage = new Stage();
+        stage.setScene(scene);
+        stage.setTitle("Text Finder");
+        //stage.initModality(Modality.APPLICATION_MODAL); //No deja interactuar con la ventana principal una vez abierta la de eliominar_File
+
+        stage.show();
+
+        Stage stageactual = (Stage) this.btn_BuscarFile.getScene().getWindow();
+        stageactual.close();
+        System.out.println("Ventana de busqueda de texto abierta");
+
+        //this.stage.close(); //este metodo cierra el programa si cierro la ventana de elimiar archivo
+
 
 
     }
@@ -86,35 +112,16 @@ public class Ventana_Principal_Controlador {
     void click_btn_EliminarFile(ActionEvent event) throws IOException {
 
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/paquete/vista_main/Ventana_Eliminardoc.fxml"));
-
         Parent root = loader.load();
-
-        Ventana_Eliminardoc_Controlador controller = loader.getController();
-
+        Ventana_Eliminardoc_Controlador controladorVeliminardoc = loader.getController();
         Scene scene = new Scene(root);
-
         Stage stage = new Stage();
-
         stage.setScene(scene);
+        stage.initModality(Modality.APPLICATION_MODAL); //No deja interactuar con la ventana principal una vez abierta la de eliominar_File
 
-        controller.init(stage , this);
-
-        /**
-         * Este metodo funciona para que la ventana principal no se cierre a la hora de mostrar la ventana de eliminar
-         * archivos
-         */
         stage.showAndWait();
 
-        ///this.stage.close(); este metodo cierra el programa si cierro la ventana de elimiar archivo
-
-    }
-
-
-    /**
-     * Método...
-     */
-    @FXML
-    void initialize() {
+        //this.stage.close(); //este metodo cierra el programa si cierro la ventana de elimiar archivo
 
     }
 

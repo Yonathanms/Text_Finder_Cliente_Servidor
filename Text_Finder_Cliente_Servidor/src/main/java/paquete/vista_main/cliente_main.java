@@ -4,6 +4,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import paquete.controlador.Ventana_Principal_Controlador;
 
@@ -36,6 +37,7 @@ public class cliente_main extends Application {
         Scene scene = new Scene(root);
 
         primaryStage.setScene(scene);
+        primaryStage.setTitle("Text_Finder");
         Ventana_Principal_Controlador controller = loader.getController();
 
         controller.setStage(primaryStage);

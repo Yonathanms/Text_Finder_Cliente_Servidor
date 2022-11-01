@@ -4,6 +4,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollBar?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -20,12 +21,12 @@
             <Image url="@../../imagenes/img_Vprincipal.png" />
          </image>
       </ImageView>
-      <Pane layoutX="109.0" layoutY="172.0" prefHeight="617.0" prefWidth="483.0" style="-fx-background-color: #f7f7f7;">
+      <Pane fx:id="panel_V_Busquedatxt" layoutX="109.0" layoutY="172.0" prefHeight="617.0" prefWidth="483.0" style="-fx-background-color: #f7f7f7;">
          <children>
-            <ScrollBar layoutX="462.0" layoutY="12.0" orientation="VERTICAL" prefHeight="593.0" prefWidth="14.0" style="-fx-background-color: #f0f0f0;" />
+            <ScrollBar fx:id="scrollbar_V_Busquedatxt" layoutX="462.0" layoutY="12.0" orientation="VERTICAL" prefHeight="593.0" prefWidth="14.0" style="-fx-background-color: #f0f0f0;" />
          </children>
       </Pane>
-      <JFXButton buttonType="RAISED" layoutX="168.0" layoutY="124.0" prefHeight="27.0" prefWidth="131.0" style="-fx-background-color: #f7f7f7;" text="Frase" textFill="#bf3636">
+      <JFXButton fx:id="btn_search_frase" buttonType="RAISED" layoutX="168.0" layoutY="124.0" onAction="#click_btn_search_frase" prefHeight="27.0" prefWidth="131.0" style="-fx-background-color: #f7f7f7;" text="Frase" textFill="#bf3636">
          <ripplerFill>
             <LinearGradient endX="1.0" endY="1.0">
                <stops>
@@ -51,12 +52,12 @@
             <Font name="Tw Cen MT Condensed Extra Bold" size="33.0" />
          </font>
       </Label>
-      <TextField layoutX="134.0" layoutY="77.0" prefHeight="28.0" prefWidth="433.0" promptText="                                    Palabra / frase">
+      <TextField fx:id="lbl_palabra_frase" focusTraversable="false" layoutX="134.0" layoutY="77.0" prefHeight="28.0" prefWidth="433.0" promptText="                                    Palabra / frase">
          <font>
             <Font name="Tw Cen MT" size="15.0" />
          </font>
       </TextField>
-      <JFXButton buttonType="RAISED" layoutX="402.0" layoutY="124.0" prefHeight="27.0" prefWidth="131.0" style="-fx-background-color: #f7f7f7;" text="Palabras" textFill="#bf3636">
+      <JFXButton fx:id="btn_search_palabras" buttonType="RAISED" layoutX="402.0" layoutY="124.0" onAction="#click_btn_search_palabras" prefHeight="27.0" prefWidth="131.0" style="-fx-background-color: #f7f7f7;" text="Palabras" textFill="#bf3636">
          <ripplerFill>
             <LinearGradient endX="1.0" endY="1.0">
                <stops>
@@ -87,7 +88,7 @@
             <Image url="@../../iconos/lupa.png" />
          </image>
       </ImageView>
-      <JFXButton buttonType="RAISED" layoutX="615.0" layoutY="212.0" prefHeight="27.0" prefWidth="131.0" style="-fx-background-color: #f7f7f7;" text="Ordenar por:" textFill="#bf3636">
+      <JFXButton fx:id="btn_ordenamiento" buttonType="RAISED" layoutX="615.0" layoutY="212.0" onAction="#click_btn_ordenamiento" prefHeight="27.0" prefWidth="131.0" style="-fx-background-color: #f7f7f7;" text="Ordenar por:" textFill="#bf3636">
          <ripplerFill>
             <LinearGradient endX="1.0" endY="1.0">
                <stops>
@@ -113,9 +114,12 @@
             <Font name="Tw Cen MT" size="23.0" />
          </font>
       </Label>
-      <TextField editable="false" layoutX="416.0" layoutY="814.0" prefHeight="25.0" prefWidth="157.0" promptText="Árbol Binario de Búsqueda" />
-      <TextField editable="false" layoutX="416.0" layoutY="853.0" prefHeight="25.0" prefWidth="157.0" promptText="                  AVL" />
-      <JFXButton buttonType="RAISED" layoutX="615.0" layoutY="726.0" prefHeight="27.0" prefWidth="131.0" style="-fx-background-color: #f7f7f7;" text="Atrás" textFill="#bf3636">
+      <TextField fx:id="lbl_Arbol_Binario_Busqueda" editable="false" focusTraversable="false" layoutX="416.0" layoutY="814.0" prefHeight="25.0" prefWidth="157.0" promptText="Árbol Binario de Búsqueda" />
+      <TextField fx:id="lbl_AVL" editable="false" focusTraversable="false" layoutX="416.0" layoutY="853.0" prefHeight="25.0" prefWidth="157.0" promptText="                  AVL">
+         <effect>
+            <Glow level="0.0" />
+         </effect></TextField>
+      <JFXButton fx:id="btn_atras_V_busquedatxt" buttonType="RAISED" layoutX="615.0" layoutY="726.0" onAction="#click_btn_atras_V_busquedatxt" prefHeight="27.0" prefWidth="131.0" style="-fx-background-color: #f7f7f7;" text="Atrás" textFill="#bf3636">
          <ripplerFill>
             <LinearGradient endX="1.0" endY="1.0">
                <stops>

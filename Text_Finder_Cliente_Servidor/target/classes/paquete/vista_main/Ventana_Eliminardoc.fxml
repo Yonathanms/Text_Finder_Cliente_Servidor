@@ -11,7 +11,6 @@
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="230.0" prefWidth="439.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="paquete.controlador.Ventana_Eliminardoc_Controlador">
    <children>
       <ImageView fitHeight="230.0" fitWidth="439.0" pickOnBounds="true" preserveRatio="true">
@@ -19,13 +18,13 @@
             <Image url="@../../imagenes/img_Veliminardoc.png" />
          </image>
       </ImageView>
-      <TextField layoutX="126.0" layoutY="90.0" prefHeight="25.0" prefWidth="188.0" promptText="                 Documento" />
+      <TextField fx:id="lbl_NameFileDelete" focusTraversable="false" layoutX="126.0" layoutY="90.0" prefHeight="25.0" prefWidth="188.0" promptText="                 Documento" />
       <Label layoutX="137.0" layoutY="31.0" text="Nombre del Documento" textFill="#bf3636">
          <font>
             <Font name="Tw Cen MT Condensed" size="24.0" />
          </font>
       </Label>
-      <JFXButton buttonType="RAISED" layoutX="89.0" layoutY="165.0" prefHeight="27.0" prefWidth="97.0" style="-fx-background-color: #f7f7f7;" text="Eliminar " textFill="#bf3636">
+      <JFXButton fx:id="btn_delete" buttonType="RAISED" layoutX="89.0" layoutY="165.0" onAction="#click_btn_delete" prefHeight="27.0" prefWidth="97.0" style="-fx-background-color: #f7f7f7;" text="Eliminar " textFill="#bf3636">
          <ripplerFill>
             <LinearGradient endX="1.0" endY="1.0">
                <stops>
@@ -46,7 +45,7 @@
             <Font name="Tw Cen MT" size="14.0" />
          </font>
       </JFXButton>
-      <JFXButton buttonType="RAISED" layoutX="255.0" layoutY="165.0" prefHeight="27.0" prefWidth="97.0" style="-fx-background-color: #f7f7f7;" text="Atrás" textFill="#bf3636">
+      <JFXButton fx:id="btn_atras" buttonType="RAISED" layoutX="255.0" layoutY="165.0" onAction="#click_btn_atras" prefHeight="27.0" prefWidth="97.0" style="-fx-background-color: #f7f7f7;" text="Atrás" textFill="#bf3636">
          <ripplerFill>
             <LinearGradient endX="1.0" endY="1.0">
                <stops>

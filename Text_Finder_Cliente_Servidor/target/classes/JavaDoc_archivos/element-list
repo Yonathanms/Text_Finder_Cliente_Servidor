@@ -1,3 +1,4 @@
 module:paquete.text_finder_cliente_servidor
 paquete.controlador
+paquete.Estructuras_Datos
 paquete.vista_main

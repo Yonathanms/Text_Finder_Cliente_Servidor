@@ -17,19 +17,19 @@
             <Image url="@../../imagenes/img_Vordenamiento.png" />
          </image>
       </ImageView>
-      <JFXRadioButton layoutX="23.0" layoutY="50.0" text="Nombre del archivo">
+      <JFXRadioButton fx:id="rad_button_nombrefile" layoutX="23.0" layoutY="50.0" selected="true" text="Nombre del archivo">
          <selectedColor>
             <Color red="0.5647059082984924" green="0.0313725508749485" blue="0.0313725508749485" />
          </selectedColor></JFXRadioButton>
-      <JFXRadioButton layoutX="23.0" layoutY="96.0" text="Fecha de Creación">
+      <JFXRadioButton fx:id="rad_button_fecha" layoutX="23.0" layoutY="96.0" text="Fecha de Creación">
          <selectedColor>
             <Color red="0.5647059082984924" green="0.0313725508749485" blue="0.0313725508749485" />
          </selectedColor></JFXRadioButton>
-      <JFXRadioButton layoutX="23.0" layoutY="142.0" text="Tamaño (Cantidad de Palabras)">
+      <JFXRadioButton fx:id="rad_button_tamaño" layoutX="23.0" layoutY="142.0" text="Tamaño (Cantidad de Palabras)">
          <selectedColor>
             <Color red="0.5647059082984924" green="0.0313725508749485" blue="0.0313725508749485" />
          </selectedColor></JFXRadioButton>
-      <JFXButton buttonType="RAISED" layoutX="88.0" layoutY="203.0" style="-fx-background-color: #f7f7f7;" text="Aceptar" textFill="#bf3636">
+      <JFXButton fx:id="btn_ordenar" buttonType="RAISED" layoutX="88.0" layoutY="203.0" onAction="#click_btn_ordenar" style="-fx-background-color: #f7f7f7;" text="Ordenar" textFill="#bf3636">
          <ripplerFill>
             <LinearGradient endX="1.0" endY="1.0">
                <stops>
