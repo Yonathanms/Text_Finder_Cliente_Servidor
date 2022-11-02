@@ -11,6 +11,9 @@ public class Nodo {
     private String valor;
     private Nodo siguiente;
 
+    /**
+     * si valor esta vacia, si el puntero apunta a nulo
+     */
     public void Nodo () {
         this.valor = "";
         this.siguiente = null;
