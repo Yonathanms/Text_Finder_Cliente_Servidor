@@ -161,7 +161,11 @@ public class Ventana_Principal_Controlador {
 
     }
 
-
+    /**
+     * Este método abre la ventana de eliminar archivo
+     * @param event
+     * @throws IOException
+     */
     @FXML
     void click_btn_EliminarFile(ActionEvent event) throws IOException {
 
@@ -179,6 +183,10 @@ public class Ventana_Principal_Controlador {
         //this.stage.close(); //este metodo cierra el programa si cierro la ventana de elimiar archivo
 
     }
+
+    /**
+     * Este método funciona para agregar elementos a la interfaz gráfica
+     */
     @FXML
     void initialize() {
 

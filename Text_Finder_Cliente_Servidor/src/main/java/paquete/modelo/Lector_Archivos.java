@@ -32,7 +32,7 @@ public class Lector_Archivos {
      * @throws InvalidFormatException no es el formato
      * @throws IOException excepción
      */
-    public String View_docx (String dir_doc) throws InvalidFormatException, IOException {
+    public String  View_docx (String dir_doc) throws InvalidFormatException, IOException {
 
         String direccion_file = dir_doc;
 

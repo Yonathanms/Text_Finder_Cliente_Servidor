@@ -1,5 +1,9 @@
 package paquete.modelo;
 
+/**
+ * Constructor que permite visualizar los archivos agregados en la interfaz gráfica
+ * @author Yonathan
+ */
 public class ArchivoView {
 
     private String nombrefile;

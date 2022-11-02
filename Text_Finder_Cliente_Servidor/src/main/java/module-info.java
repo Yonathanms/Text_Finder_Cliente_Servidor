@@ -18,5 +18,6 @@ module paquete.text_finder_cliente_servidor {
     exports paquete.vista_main;
     exports paquete.controlador;
     exports paquete.modelo;
+    exports paquete.Algoritmos_Ordenamiento;
 
 }

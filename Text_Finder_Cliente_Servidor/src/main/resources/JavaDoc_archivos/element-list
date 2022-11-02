@@ -1,4 +1,5 @@
 module:paquete.text_finder_cliente_servidor
+paquete.Algoritmos_Ordenamiento
 paquete.controlador
 paquete.Estructuras_Datos
 paquete.modelo
