@@ -78,8 +78,8 @@ public class Lector_Archivos {
      * Este método permite leer el documento .docx
      * @param dir_doc dirección docx
      * @return El texto del archivo
-     * @throws InvalidFormatException
-     * @throws IOException
+     * @throws InvalidFormatException Excepción
+     * @throws IOException Excepción
      */
     public String View_docx (String dir_doc) throws InvalidFormatException, IOException {
 
@@ -100,7 +100,7 @@ public class Lector_Archivos {
      * Método que permite leer el contenido de archivos .pdf
      * @param dir_pdf dirección pdf
      * @return contenido de pdf
-     * @throws IOException
+     * @throws IOException excepción
      */
     public String View_pdf (String dir_pdf) throws IOException {
 
@@ -131,7 +131,7 @@ public class Lector_Archivos {
      * Método que cumple la función de leer el contenido de archivos .txt
      * @param dir_txt dirección .txt
      * @return contenido del texto
-     * @throws IOException
+     * @throws IOException excepción
      */
     public String View_txt (String dir_txt) throws IOException {
 

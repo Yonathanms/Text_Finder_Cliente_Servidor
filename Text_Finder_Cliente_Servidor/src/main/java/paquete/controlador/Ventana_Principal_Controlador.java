@@ -92,6 +92,14 @@ public class Ventana_Principal_Controlador {
         fileChooser.setInitialDirectory(new File("C:"));
         File selectedFile = fileChooser.showOpenDialog(stage);
 
+        //funcion al seleccionar file
+        if (selectedFile != null) {
+            System.out.println("archivo seleccionado");
+            System.out.println(selectedFile.getPath());
+            System.out.println(selectedFile.getName());
+
+        }
+
     }
 
 
@@ -136,6 +144,7 @@ public class Ventana_Principal_Controlador {
         Stage stage = new Stage();
         stage.setScene(scene);
         stage.initModality(Modality.APPLICATION_MODAL); //No deja interactuar con la ventana principal una vez abierta la de eliominar_File
+
 
         stage.showAndWait();
 

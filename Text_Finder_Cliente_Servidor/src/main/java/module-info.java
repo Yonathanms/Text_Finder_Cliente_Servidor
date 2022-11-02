@@ -13,7 +13,10 @@ module paquete.text_finder_cliente_servidor {
 
     opens  paquete.controlador to javafx.fxml;
     opens paquete.vista_main to javafx.fxml;
+
+    exports paquete.Estructuras_Datos;
     exports paquete.vista_main;
     exports paquete.controlador;
     exports paquete.modelo;
+
 }
