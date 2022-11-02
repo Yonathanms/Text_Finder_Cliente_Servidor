@@ -1,5 +1,11 @@
 package paquete.controlador;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.control.cell.TreeItemPropertyValueFactory;
 import javafx.stage.FileChooser;
 
 import com.jfoenix.controls.JFXButton;
@@ -8,10 +14,11 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.ScrollBar;
-import javafx.scene.layout.Pane;
+
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+import paquete.Estructuras_Datos.Lista_Simple;
+import paquete.modelo.ArchivoView;
 
 import java.io.File;
 import java.io.IOException;
@@ -29,29 +36,20 @@ public class Ventana_Principal_Controlador {
      */
     private Stage stage;
 
-    /**
-     * metodo que obtiene un escenario
-     * @param primaryStage
-     */
-    //public void setStage(Stage primaryStage) {
-        //stage = primaryStage;
-   // }
-
-    /**
-     * atributo del pane de la ventana principal
-     */
     @FXML
-    private Pane Pane_V1;
+    private TableColumn Col_DirFile;
 
-    /**
-     * atributo del ScrollBar de la ventana principal
-     */
     @FXML
-    private ScrollBar Scroll_V1;
+    private TableColumn Col_NameFile;
 
-    /**
-     * atributo del botón de "Agregar Documento"
-     */
+    @FXML
+    private TableView <ArchivoView> TableView_Principal;
+
+    private ObservableList <ArchivoView> lista_archivos;
+
+
+
+
     @FXML
     private JFXButton btn_AgregarFile;
 
@@ -67,6 +65,8 @@ public class Ventana_Principal_Controlador {
     @FXML
     private JFXButton btn_EliminarFile;
 
+
+
     /**
      * Metodo del boton de agregar archivos
      * @param event click
@@ -74,6 +74,10 @@ public class Ventana_Principal_Controlador {
 
     @FXML
     void click_btn_AgregarFile(ActionEvent event) {
+
+        //Instancia la lista
+        Lista_Simple list_file = new Lista_Simple();
+
         //Constantes que definen filtros de los archivos en la búsqueda de la biblioteca de Windows
         FileChooser.ExtensionFilter pdf = new FileChooser.ExtensionFilter("Archivos PDF","*.pdf");
         FileChooser.ExtensionFilter doc = new FileChooser.ExtensionFilter("Archivos Word","*.docx");
@@ -97,10 +101,34 @@ public class Ventana_Principal_Controlador {
             System.out.println("archivo seleccionado");
             System.out.println(selectedFile.getPath());
             System.out.println(selectedFile.getName());
+            System.out.println(selectedFile.getPath());
+
+            // Agrega el archivo a la lista simple
+            //lista_archivos.Agregar_Final(selectedFile.getName());
+            System.out.println(lista_archivos);
+
+            // variables del nombre y url del archivo
+            String nombrefile = selectedFile.getName();
+            String direction = selectedFile.getPath();
+            System.out.println(nombrefile);
+            System.out.println(direction);
+
+            //Instancia el archivo
+            ArchivoView file = new ArchivoView(nombrefile, direction);
+
+            //Agrega el archivo a la lista simple y a la interfaz
+            list_file.Agregar_Final(selectedFile.getName());
+            this.lista_archivos.add(file);
+            this.TableView_Principal.setItems(lista_archivos);
+
+            }
+
+
+
 
         }
 
-    }
+
 
 
     /**
@@ -151,5 +179,12 @@ public class Ventana_Principal_Controlador {
         //this.stage.close(); //este metodo cierra el programa si cierro la ventana de elimiar archivo
 
     }
+    @FXML
+    void initialize() {
 
+        lista_archivos = FXCollections.observableArrayList();
+
+        this.Col_NameFile.setCellValueFactory(new PropertyValueFactory("nombrefile"));
+        this.Col_DirFile.setCellValueFactory(new PropertyValueFactory("direction"));
+    }
 }

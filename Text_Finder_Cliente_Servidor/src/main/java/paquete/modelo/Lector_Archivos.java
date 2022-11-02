@@ -26,60 +26,11 @@ public class Lector_Archivos {
 
 
     /**
-     * Obtiene la direccion de archivo doc
-     * @return dirección docx
-     */
-    public String getDir_doc() {
-        return dir_doc;
-    }
-
-    /**
-     * Es un set de la direccion de archivo doc
-     * @param dir_doc dirección docx
-     */
-    public void setDir_doc(String dir_doc) {
-        this.dir_doc = dir_doc;
-    }
-
-    /**
-     * Obtiene la dirección de un archivo PDF
-     * @return dirección pdf
-     */
-    public String getDir_pdf() {
-        return dir_pdf;
-    }
-
-    /**
-     * Envía la dirección de un archivo pdf
-     * @param dir_pdf dirección pdf
-     */
-    public void setDir_pdf(String dir_pdf) {
-        this.dir_pdf = dir_pdf;
-    }
-
-    /**
-     *
-     * Obtiene la dirección de archivo de texto
-     * @return dirección txt
-     */
-    public String getDir_txt() {
-        return dir_txt;
-    }
-
-    /**
-     * Envía la dirección de archivo de texto
-     * @param dir_txt dirección txt
-     */
-    public void setDir_txt(String dir_txt) {
-        this.dir_txt = dir_txt;
-    }
-
-    /**
-     * Este método permite leer el documento .docx
-     * @param dir_doc dirección docx
-     * @return El texto del archivo
-     * @throws InvalidFormatException Excepción
-     * @throws IOException Excepción
+     * Método que lee el contenido de los archivos.docx
+     * @param dir_doc
+     * @return contenido de archivos docx
+     * @throws InvalidFormatException no es el formato
+     * @throws IOException excepción
      */
     public String View_docx (String dir_doc) throws InvalidFormatException, IOException {
 
