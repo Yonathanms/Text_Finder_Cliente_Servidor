@@ -81,6 +81,8 @@ public class Ventana_Principal_Controlador {
         FileChooser.ExtensionFilter all = new FileChooser.ExtensionFilter("Todos los archivos","*.txt","*.docx","*.pdf");
 
         FileChooser fileChooser = new FileChooser();
+
+
         fileChooser.getExtensionFilters().addAll(pdf);
         fileChooser.getExtensionFilters().addAll(doc);
         fileChooser.getExtensionFilters().addAll(txt);
@@ -89,7 +91,7 @@ public class Ventana_Principal_Controlador {
         fileChooser.setTitle("Seleccionar archivo(s) o carpeta");
         fileChooser.setInitialDirectory(new File("C:"));
         File selectedFile = fileChooser.showOpenDialog(stage);
-        
+
     }
 
 

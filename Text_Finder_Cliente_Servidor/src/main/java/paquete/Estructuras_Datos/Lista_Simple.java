@@ -2,13 +2,12 @@ package paquete.Estructuras_Datos;
 
 
 /**
- * Esta clase representa la lista simple de los archivos que se van agregando a la interfaz
- * @author Yonathan
- *
+ * Esta clase representa el constructor de la lista enlazada simple
+ * @param <> es lo que van a contener los nodos (archivos)
  */
-public class Lista_Simple {
+
+//public class nodo
 
 
 
 
-}
